@@ -25,4 +25,8 @@ require_once CLASS_REALDIR . 'pages/LC_Page.php';
 
 class LC_Page_Ex extends LC_Page
 {
+    function init(){
+        parent::init();
+        include_class::createCutomeObj($this);
+    }
 }
