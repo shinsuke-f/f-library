@@ -1,0 +1,10 @@
+SetEnvIf X-FORWARDED-FOR xxx.xxx.xxx.xxx allowIP
+
+AuthType Basic
+AuthName administrator
+AuthUserFile ./.htpasswd
+Require valid-user
+Satisfy any
+Order deny,allow
+allow from env=allowip
+Deny from all
